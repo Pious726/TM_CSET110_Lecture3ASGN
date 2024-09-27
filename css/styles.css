@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    color: #272727;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background-image: url(../images/topography.svg), linear-gradient(110deg, #f93d66, #6d47d9);
+    background-size: 340px, auto;
+    margin: 50px;
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+.container {
+    display: grid;
+    grid-gap: 20px;
+}
+
+/* Style rules for all text */
+h1, h2, h3 {
+    margin: 0 0 5px 0;
+}
+h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Style rules for navagation */
+.nav {
+    text-align: center;
+    margin-bottom: 15px;
+}
+.nav ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 10px;
+    list-style-type: none;
+    padding: 0;
+}
+.nav a {
+    background-color: #ffc600;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+}
+
+/* Style rules for the top section */
+.top {
+    display: grid;
+    grid-template-areas: 
+    "header header aside1"
+    "header header aside2";
+    grid-gap: 20px;
+}
+.header {
+    background-image: url(../images/taco.jpg);
+    background-size: cover;
+    background-position: bottom right;
+    height: 400px;
+    box-sizing: inherit;
+    grid-area: header;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+.header h1 {
+    background-color: #ffc600;
+    font-size: 30px;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+.header p {
+    background-color: #ffc600;
+    font-weight: 900;
+    margin: 15px 0;
+    padding: 5px;
+}
+.aside1 {
+    background-color: #ffc600;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+.aside2 {
+    background-color: #ffc600;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+.price {
+    font-weight: 300;
+    font-size: 60px;
+}
+
+/* Style rules for grid section */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+.section {
+    background-color: white;
+    border: 1px solid white;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px;
+}
+.section p {
+    color: rgba(0, 0, 0, 0.5);
+    margin: 15px 0;
+    font-weight: bold;
+}
+.emoji {
+    font-size: 50px;
+}
+
+/* Styles for featured taco */
+.featured {
+    background-color: white;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    align-items: center;
+}
+.featured p {
+    margin: 15px 0;
+    font-weight: bold;
+}
+button {
+    background-color: #ffc600;
+    padding: 10px 20px;
+}
+
+/* Style rules for gallery */
+.gallery {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.gallery h2 {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-column: 1/-1;
+    grid-gap: 20px;
+    align-items: center;
+}
+.gallery h2:before, .gallery h2:after {
+    display: block;
+    content: '';
+    height: 10px;
+    background: linear-gradient(to var(--direction, left), #ffc600, transparent);
+}
+.gallery h2:after {
+    --direction: right;
+}
+
+/* Style rules for footer */
+.footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 0;
+    font-size: 12px;
+}
